@@ -7,7 +7,7 @@ function ProductCard({ image, badgetext, title, subtitle, price }) {
   useEffect(() => {
     // Dynamically set the badge color based on badgetext
     if (badgetext === "New") {
-      setBadgeColor("bg-green-500");
+      setBadgeColor("bg-[#2EC1AC]");
     } 
      else {
       setBadgeColor("bg-[#E97171]");
