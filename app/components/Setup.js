@@ -27,7 +27,7 @@ function Setup() {
             <img
               key={index}
               src={src}
-              className="w-full h-full object-cover rounded-lg"
+              className="md:w-full h-full object-cover rounded-lg"
               alt={`Setup ${index + 1}`}
             />
           ))}

@@ -4,7 +4,7 @@ function Product({ image, title }) {
         <img
           src={image}
           alt={title}
-          className="w-[351px] h-[460px] object-cover rounded-lg"
+          className="md:w-[351px] md:h-[460px] md:object-cover rounded-lg "
         />
         <h2 className="p-4 text-lg font-bold text-gray-800">{title}</h2>
       </div>

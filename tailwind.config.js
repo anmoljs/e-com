@@ -11,6 +11,10 @@ module.exports = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        sans: ['var(--font-inter)', 'poppins'],  // Replace with your Google Font variable
+        mono: ['var(--font-roboto)', 'poppins'],  // Example for Roboto font
+      },
     },
   },
   plugins: [],

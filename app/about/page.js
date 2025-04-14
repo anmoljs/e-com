@@ -33,7 +33,7 @@ function About() {
           <div key={index} className="max-w-4xl mx-auto p-8">
             {/* Main Image */}
             <div className="flex justify-center ">
-              <img src={post.img} alt={post.title} className="h-[500px] w-[817px] object-cover rounded-lg" />
+              <img src={post.img} alt={post.title} className="md:h-[500px] md:w-[817px] object-cover rounded-lg" />
             </div>
 
             {/* Metadata Section */}

@@ -31,7 +31,7 @@ function Contact() {
 
       {/* Hero Section */}
       <section>
-        <div className="relative">
+        <div className="relative md:mt-0 mt-4">
           {/* Background Image */}
           <img
             src="/minh.jpg"
@@ -164,31 +164,31 @@ function Contact() {
             </form>
           </div>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center p-24 bg-[#F9F1E7] mt-12 h-[270px]">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center md:p-24 p-12 bg-[#F9F1E7] mt-12 ">
   {/* High Quality */}
   <div className="flex flex-col items-center space-y-2">
-    <img src="trophy 1.png" alt="High Quality" className="h-16 w-16" />
+    <img src="trophy 1.png" alt="High Quality" className="md:h-16 md:w-16 h-10 w-10" />
     <h1 className="text-lg font-semibold">High Quality</h1>
     <p>crafted from top materials</p>
   </div>
 
   {/* Warranty Protection */}
   <div className="flex flex-col items-center space-y-2">
-    <img src="guarantee.png" alt="Warranty Protection" className="h-16 w-16" />
+    <img src="guarantee.png" alt="Warranty Protection" className="md:h-16 md:w-16 h-10 w-10" />
     <h1 className="text-lg font-semibold">Warranty Protection</h1>
     <p>over 2 years</p>
   </div>
 
   {/* Free Shipping */}
   <div className="flex flex-col items-center space-y-2">
-    <img src="shipping.png" alt="Free Shipping" className="h-16 w-16" />
+    <img src="shipping.png" alt="Free Shipping" className="md:h-16 md:w-16 h-10 w-10" />
     <h1 className="text-lg font-semibold">Free Shipping</h1>
     <p>order over 150$</p>
   </div>
 
   {/* 24/7 Support */}
   <div className="flex flex-col items-center space-y-2">
-    <img src="customer-support.png" alt="24/7 Support" className="h-16 w-16" />
+    <img src="customer-support.png" alt="24/7 Support" className="md:h-16 md:w-16 h-10 w-10" />
     <h1 className="text-lg font-semibold">24/7 Support</h1>
     <p>dedicated support</p>
   </div>

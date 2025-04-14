@@ -29,7 +29,7 @@ function wishlist(){
                       </div>
                     </div>
                     <div>
-                        <p className="capitalize text-4xl font-normal text-center p-24">there is no product in your wishlist</p>
+                        <p className="capitalize text-4xl font-normal text-center md:p-24 p-4">there is no product in your wishlist</p>
                     </div>
                     </section>
                     <Footer/>

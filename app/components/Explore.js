@@ -53,7 +53,7 @@ function Explore() {
     ],
     appendDots: (dots) => (
       <div>
-        <ul className="flex justify-center space-x-8 mt-24 ml-12">{dots}</ul>
+        <ul className="flex justify-center md:space-x-8 md:mt-24 md:ml-12">{dots}</ul>
       </div>
     ),
     customPaging: (i) => (
@@ -65,14 +65,14 @@ function Explore() {
     <div className="w-full h-[670px] bg-[#FAF3EA] mt-16 flex flex-col md:flex-row items-center justify-between px-12 py-10">
       {/* Left Side: Text Section */}
       <div className="md:w-1/3 w-full md:text-left text-center">
-        <h1 className="font-bold text-3xl mb-4 capitalize tracking-wide">
+        <h1 className="font-bold md:text-3xl text-xl mb-4 capitalize tracking-wide">
           50+ Beautiful Rooms Inspirations
         </h1>
         <h2 className="text-gray-700 text-normal tracking-normal">
           Our designers have already created a variety of beautiful room
           prototypes to inspire you.
         </h2>
-        <button className="h-[48px] w-[176px] bg-[#B88E2F] text-white capitalize mt-8 rounded-lg hover:bg-[#A77D1D] transition">
+        <button className="h-[48px] w-[176px] bg-[#B88E2F] text-white capitalize md:mt-8 mt-2 rounded-lg hover:bg-[#A77D1D] transition">
           Explore More
         </button>
       </div>
@@ -92,7 +92,7 @@ function Explore() {
               <img
                 src={img}
                 alt={`Slide ${index + 1}`}
-                className="md:h-[482px] md:w-[404px] h-[250px] object-cover ml-12"
+                className="md:h-[482px] md:w-[404px] h-[350px] w-[304px] object-cover ml-12"
               />
             </div>
           ))}

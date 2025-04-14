@@ -3,7 +3,7 @@ function Footer() {
       <footer className=" md:max-w-full  border-t-2 border-gray-300 mt-12 md:py-8">
         <div className="max-w-[1240px] h-[505px] mx-auto px-4">
           {/* Top Section */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 my-12 ">
+          <div className="grid grid-rows-1 md:grid-cols-4 gap-8 my-12 ">
             {/* Column 1: Logo */}
             <div>
               <h1 className="text-4xl font-bold mb-4 capitalize">funiro.</h1>
