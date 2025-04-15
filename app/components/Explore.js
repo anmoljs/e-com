@@ -1,34 +1,28 @@
 "use client";
 
 import { useState } from "react";
+import { motion } from "framer-motion";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 function Explore() {
-  const images = [
-    "rectangle 24.png",
-    "newone.jpg",
-    "unsplash.jpg",
-    "respira.png",
-  ];
-
+  const images = ["rectangle 24.png", "newone.jpg", "unsplash.jpg", "respira.png"];
   const [activeIndex, setActiveIndex] = useState(0);
 
-  // Custom Next Arrow
+  // Custom Arrows
   const NextArrow = ({ onClick }) => (
     <button
-      className="absolute top-1/2 right-0 transform -translate-y-1/2 text-white p-4 rounded-full  bg-[#B88E2F] transition-all duration-300 z-10"
+      className="absolute top-1/2 right-0 transform -translate-y-1/2 text-white p-4 rounded-full bg-[#B88E2F] transition-all duration-300 z-10"
       onClick={onClick}
     >
       ▶
     </button>
   );
 
-  // Custom Prev Arrow
   const PrevArrow = ({ onClick }) => (
     <button
-      className="absolute top-1/2 left-0 transform -translate-y-1/2 ml-4 text-white p-4 rounded-full  bg-[#B88E2F] transition-all duration-300 z-10"
+      className="absolute top-1/2 left-0 transform -translate-y-1/2 ml-4 text-white p-4 rounded-full bg-[#B88E2F] transition-all duration-300 z-10"
       onClick={onClick}
     >
       ◀
@@ -63,8 +57,15 @@ function Explore() {
 
   return (
     <div className="w-full h-[670px] bg-[#FAF3EA] mt-16 flex flex-col md:flex-row items-center justify-between px-12 py-10">
+      
       {/* Left Side: Text Section */}
-      <div className="md:w-1/3 w-full md:text-left text-center">
+      <motion.div
+        initial={{ opacity: 0, x: -50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="md:w-1/3 w-full md:text-left text-center"
+      >
         <h1 className="font-bold md:text-3xl text-xl mb-4 capitalize tracking-wide">
           50+ Beautiful Rooms Inspirations
         </h1>
@@ -75,29 +76,40 @@ function Explore() {
         <button className="h-[48px] w-[176px] bg-[#B88E2F] text-white capitalize md:mt-8 mt-2 rounded-lg hover:bg-[#A77D1D] transition">
           Explore More
         </button>
-      </div>
+      </motion.div>
 
-      {/* Right Side: Image Slider */}
-      <div className="md:w-2/3 w-full">
+      {/* Right Side: Image Slider with Animation */}
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="md:w-2/3 w-full"
+      >
         <Slider {...sliderSettings} className="w-full mx-auto">
           {images.map((img, index) => (
-            <div
+            <motion.div
               key={index}
               className={`flex justify-center transition-all duration-500 ${
                 activeIndex === index ? "scale-105 space-x-12" : "opacity-80"
-                
               }`}
+              initial={{ opacity: 0.6, scale: 0.95 }}
+              animate={{
+                opacity: activeIndex === index ? 1 : 0.6,
+                scale: activeIndex === index ? 1.05 : 0.95,
+              }}
+              transition={{ duration: 0.5 }}
             >
-              
-              <img
+              <motion.img
                 src={img}
                 alt={`Slide ${index + 1}`}
-                className="md:h-[482px] md:w-[404px] h-[350px] w-[304px] object-cover ml-12"
+                className="md:h-[482px] md:w-[404px] h-[350px] w-[304px] object-cover ml-12 rounded-lg shadow-md"
+                whileHover={{ scale: 1.08 }}
               />
-            </div>
+            </motion.div>
           ))}
         </Slider>
-      </div>
+      </motion.div>
     </div>
   );
 }
