@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 function Explore() {
-  const images = ["rectangle 24.png", "newone.jpg", "unsplash.jpg", "respira.png"];
+  const images = ["/rectangle 24.png", "/newone.jpg", "/unsplash.jpg", "/respira.png"];
   const [activeIndex, setActiveIndex] = useState(0);
 
   // Custom Arrows

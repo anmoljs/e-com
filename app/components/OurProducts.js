@@ -6,14 +6,14 @@ function OurProducts({ showHeading = true, hideExtraRows = false }) {
   const [showAll, setShowAll] = useState(false);
 
   const products = [
-    { image: "syltherine.png", badgetext: "-30%", title: "Syltherine", subtitle: "Stylish cafe Chair", price: "Rp 2.500.000" },
-    { image: "pinkgy.png", overlayImage: "Overlay.png", title: "pinkgy", subtitle: "Cute bed set", price: "Rp 2.500.000" },
-    { image: "potty.png", badgetext: "New", title: "potty", subtitle: "Minimalist flower pot", price: "Rp 2.500.000" },
-    { image: "muggo.png", title: "muggo", subtitle: "Small mug", price: "Rp 2.500.000" },
-    { image: "respira.png", badgetext: "-50%", title: "respira", subtitle: "Outdoor bar table and stool", price: "Rp 2.500.000" },
-    { image: "grifo.png", badgetext: "-50%", title: "grifo", subtitle: "Night lamp", price: "Rp 2.500.000" },
-    { image: "lolito.png", title: "lolito", subtitle: "Stylish Sofa Chair", price: "Rp 2.500.000" },
-    { image: "leviosa.jpg", badgetext: "New", title: "leviosa", subtitle: "Luxury big sofa", price: "Rp 2.500.000" },
+    { image: "/syltherine.png", badgetext: "-30%", title: "Syltherine", subtitle: "Stylish cafe Chair", price: "Rp 2.500.000" },
+    { image: "/pinkgy.png",  title: "pinkgy", subtitle: "Cute bed set", price: "Rp 2.500.000" },
+    { image: "/potty.png", badgetext: "New", title: "potty", subtitle: "Minimalist flower pot", price: "Rp 2.500.000" },
+    { image: "/muggo.png", title: "muggo", subtitle: "Small mug", price: "Rp 2.500.000" },
+    { image: "/respira.png", badgetext: "-50%", title: "respira", subtitle: "Outdoor bar table and stool", price: "Rp 2.500.000" },
+    { image: "/grifo.png", badgetext: "-50%", title: "grifo", subtitle: "Night lamp", price: "Rp 2.500.000" },
+    { image: "/lolito.png", title: "lolito", subtitle: "Stylish Sofa Chair", price: "Rp 2.500.000" },
+    { image: "/leviosa.jpg", badgetext: "New", title: "leviosa", subtitle: "Luxury big sofa", price: "Rp 2.500.000" },
   ];
 
   // Agar hideExtraRows true hai aur showAll false hai, toh sirf pehle 4 products show karo
