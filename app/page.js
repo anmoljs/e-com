@@ -1,5 +1,5 @@
-import './globals.css';
-import React from "react";
+
+
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import ProductRange from './components/ProductRange';
