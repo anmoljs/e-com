@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { useState } from "react";
 import ProductCard from "./ProductCard";
 
@@ -7,7 +7,7 @@ function OurProducts({ showHeading = true, hideExtraRows = false }) {
 
   const products = [
     { image: "/syltherine.png", badgetext: "-30%", title: "Syltherine", subtitle: "Stylish cafe Chair", price: "Rp 2.500.000" },
-    { image: "/pinkgy.png",  title: "pinkgy", subtitle: "Cute bed set", price: "Rp 2.500.000" },
+    { image: "/pinkgy.png", title: "pinkgy", subtitle: "Cute bed set", price: "Rp 2.500.000" },
     { image: "/potty.png", badgetext: "New", title: "potty", subtitle: "Minimalist flower pot", price: "Rp 2.500.000" },
     { image: "/muggo.png", title: "muggo", subtitle: "Small mug", price: "Rp 2.500.000" },
     { image: "/respira.png", badgetext: "-50%", title: "respira", subtitle: "Outdoor bar table and stool", price: "Rp 2.500.000" },
@@ -16,16 +16,15 @@ function OurProducts({ showHeading = true, hideExtraRows = false }) {
     { image: "/leviosa.jpg", badgetext: "New", title: "leviosa", subtitle: "Luxury big sofa", price: "Rp 2.500.000" },
   ];
 
-  // Agar hideExtraRows true hai aur showAll false hai, toh sirf pehle 4 products show karo
   const displayedProducts = hideExtraRows && !showAll ? products.slice(0, 4) : products;
 
   return (
-    <div className="text-center mx-auto">
+    <div className="text-center mx-auto px-4 md:px-12 lg:px-24 py-12">
       {/* Title Section */}
-      {showHeading && <h1 className="text-3xl font-normal capitalize">Our Products</h1>}
+      {showHeading && <h1 className="text-3xl md:text-4xl font-semibold capitalize mb-8">Our Products</h1>}
 
-      {/* Products Section */}
-      <div className="md:grid grid-cols-4 md:gap-2 md:px-36 md:mx-0 mx-16">
+      {/* Products Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {displayedProducts.map((product, index) => (
           <ProductCard
             key={index}
@@ -38,14 +37,16 @@ function OurProducts({ showHeading = true, hideExtraRows = false }) {
         ))}
       </div>
 
-      {/* See More Button (Only if hideExtraRows is true and showAll is false) */}
-      {!showAll && (
-        <button
-          onClick={() => setShowAll(true)}
-          className="items-center justify-between h-[48px] w-[245px] border-[#B88E2F] bg-white border-2 capitalize font-semibold text-[#B88E2F] mt-8"
-        >
-          See More
-        </button>
+      {/* See More Button */}
+      {!showAll && hideExtraRows && (
+        <div className="flex justify-center mt-10">
+          <button
+            onClick={() => setShowAll(true)}
+            className="h-12 w-60 border-2 border-[#B88E2F] bg-white text-[#B88E2F] font-semibold rounded-md transition hover:bg-[#f8f3e8]"
+          >
+            See More
+          </button>
+        </div>
       )}
     </div>
   );
