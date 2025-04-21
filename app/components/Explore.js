@@ -112,6 +112,6 @@ function Explore() {
       </motion.div>
     </div>
   );
-}
+};
 
 export default Explore;
