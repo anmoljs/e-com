@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 function Explore() {
-  const images = ["/rectangle 24.png", "/newone.jpg", "/unsplash.jpg", "/respira.png"];
+  const images = ["/muggo.png", "/newone.jpg", "/unsplash.jpg", "/respira.png"];
   const [activeIndex, setActiveIndex] = useState(0);
 
   // Custom Arrows
@@ -40,7 +40,7 @@ function Explore() {
     arrows: true,
     prevArrow: <PrevArrow />,
     nextArrow: <NextArrow />,
-    beforeChange: (oldIndex, newIndex) => setActiveIndex(newIndex),
+    beforeChange: (_, newIndex) => setActiveIndex(newIndex),
     responsive: [
       { breakpoint: 1024, settings: { slidesToShow: 2 } },
       { breakpoint: 768, settings: { slidesToShow: 1 } },
@@ -50,8 +50,8 @@ function Explore() {
         <ul className="flex justify-center lg:space-x-8 lg:mt-24 lg:ml-12">{dots}</ul>
       </div>
     ),
-    customPaging: (i) => (
-      <div className="w-4 h-4 rounded-full bg-[#B88E2F] transition-all duration-300 hover:opacity-100 slick-active:bg-[#B88E2F]" />
+    customPaging: () => (
+      <div className="w-4 h-4 rounded-full bg-[#B88E2F] transition-all duration-300 hover:opacity-100" />
     ),
   };
 
