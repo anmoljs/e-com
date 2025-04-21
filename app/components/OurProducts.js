@@ -2,7 +2,7 @@
 import { useState } from "react";
 import ProductCard from "./ProductCard";
 
-function OurProducts({ showHeading = true, hideExtraRows = false }) {
+function OurProducts({ showHeading = true }) {
   const [showAll, setShowAll] = useState(false);
 
   const products = [
@@ -16,15 +16,15 @@ function OurProducts({ showHeading = true, hideExtraRows = false }) {
     { image: "/leviosa.jpg", badgetext: "New", title: "leviosa", subtitle: "Luxury big sofa", price: "Rp 2.500.000" },
   ];
 
-  const displayedProducts = hideExtraRows && !showAll ? products.slice(0, 4) : products;
+  const displayedProducts = showAll ? products : products.slice(0, 4);
 
   return (
     <div className="text-center mx-auto px-4 md:px-12 lg:px-24 py-12">
-      {/* Title Section */}
-      {showHeading && <h1 className="text-3xl md:text-4xl font-semibold capitalize mb-8">Our Products</h1>}
+      {showHeading && (
+        <h1 className="text-3xl md:text-4xl font-semibold capitalize mb-8">Our Products</h1>
+      )}
 
-      {/* Products Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {displayedProducts.map((product, index) => (
           <ProductCard
             key={index}
@@ -37,17 +37,14 @@ function OurProducts({ showHeading = true, hideExtraRows = false }) {
         ))}
       </div>
 
-      {/* See More Button */}
-      {!showAll && hideExtraRows && (
-        <div className="flex justify-center mt-10">
-          <button
-            onClick={() => setShowAll(true)}
-            className="h-12 w-60 border-2 border-[#B88E2F] bg-white text-[#B88E2F] font-semibold rounded-md transition hover:bg-[#f8f3e8]"
-          >
-            See More
-          </button>
-        </div>
-      )}
+      <div className="flex justify-center mt-10">
+        <button
+          onClick={() => setShowAll((prev) => !prev)}
+          className="h-12 w-60 border-2 border-[#B88E2F] bg-white text-[#B88E2F] font-semibold rounded-md transition hover:bg-[#f8f3e8]"
+        >
+          {showAll ? "Show Less" : "See More"}
+        </button>
+      </div>
     </div>
   );
 }

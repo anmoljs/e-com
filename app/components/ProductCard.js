@@ -25,7 +25,7 @@ function ProductCard({ image, badgetext, title, subtitle, price }) {
         />
         {badgetext && (
           <div
-            className={`absolute top-3 right-6 h-[40px] w-[40px] ${badgeColor} text-white text-sm font-normal flex items-center justify-center rounded-full capitalize`}
+            className={`absolute top-3 lg:right-10 md:mx-4 h-[40px] w-[40px] ${badgeColor} text-white text-sm font-normal flex items-center justify-center rounded-full capitalize`}
           >
             {badgetext}
           </div>

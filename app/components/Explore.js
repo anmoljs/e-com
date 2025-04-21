@@ -47,7 +47,7 @@ function Explore() {
     ],
     appendDots: (dots) => (
       <div>
-        <ul className="flex justify-center md:space-x-8 md:mt-24 md:ml-12">{dots}</ul>
+        <ul className="flex justify-center lg:space-x-8 lg:mt-24 lg:ml-12">{dots}</ul>
       </div>
     ),
     customPaging: (i) => (
@@ -66,7 +66,7 @@ function Explore() {
         viewport={{ once: true }}
         className="md:w-1/3 w-full md:text-left text-center"
       >
-        <h1 className="font-bold md:text-3xl text-xl mb-4 capitalize tracking-wide">
+        <h1 className="font-bold lg:text-3xl text-xl mb-4 capitalize tracking-wide">
           50+ Beautiful Rooms Inspirations
         </h1>
         <h2 className="text-gray-700 text-normal tracking-normal">
@@ -103,7 +103,7 @@ function Explore() {
               <motion.img
                 src={img}
                 alt={`Slide ${index + 1}`}
-                className="md:h-[482px] md:w-[404px] h-[350px] w-[304px] object-cover ml-12 rounded-lg shadow-md"
+                className="lg:h-[482px] lg:w-[404px] h-[350px] w-[304px] object-cover ml-12 rounded-lg shadow-md"
                 whileHover={{ scale: 1.08 }}
               />
             </motion.div>

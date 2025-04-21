@@ -7,7 +7,7 @@ function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="md:h-[90px] md:w-full bg-white text-black flex items-center justify-between px-4 md:px-16 md:mt-0 mt-2 relative sm:space-x-36">
+    <nav className="h-[90px] w-full bg-white text-black flex items-center justify-between px-4 lg:px-16 md:mt-0 mt-2 relative sm:space-x-36">
       {/* Logo Section */}
       <div className="flex items-center md:space-x-4">
         <img src="logo.png" alt="Logo" className="md:h-12 md:w-12 mr-2 object-contain h-10 w-10" />
